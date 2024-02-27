@@ -1,0 +1,25 @@
+\usepackage{tikz}
+
+\tikzset{image_abcd/.pic ={
+	\node[inner sep=0pt] at (0,0) {\includegraphics[width=4in, height=4in]{#1}};
+}}
+
+\tikzset{image_a/.pic={
+	\clip (0in,0in) rectangle (2in, 2in);
+	\pic at (2in,0in) {image_abcd={#1}};
+}}
+
+\tikzset{image_b/.pic={
+	\clip (0in,0in) rectangle (2in, 2in);
+	\pic at (0,0) {image_abcd={#1}};
+}}
+
+\tikzset{image_c/.pic={
+	\clip (0in,0in) rectangle (2in, 2in);
+	\pic at (2in, 2in) {image_abcd={#1}};
+}}
+
+\tikzset{image_d/.pic={
+	\clip (0in,0in) rectangle (2in, 2in);
+	\pic at (0,2in) {image_abcd={#1}};
+}}

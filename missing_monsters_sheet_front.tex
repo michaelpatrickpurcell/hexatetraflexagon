@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{hexatetraflexagon}
+
+\tikzset{subsquare/.style = {minimum width = 2in, minimum height = 2in}}
+
+\newcommand{\pone}{Images/Monsters/missing_monsters_title_card.png}
+\newcommand{\ptwo}{Images/Monsters/monster_gallery_bw.png}
+\newcommand{\pthree}{Images/Monsters/blue_monster.png}
+\newcommand{\pfour}{Images/Monsters/red_monster.png}
+\newcommand{\pfive}{Images/Monsters/green_monster.png}
+\newcommand{\psix}{Images/Monsters/yellow_monster.png}
+
+\begin{document}
+\begin{tikzpicture}
+\node[circle, fill=black] at (0,0) {};
+
+\node[subsquare] at (1in, 3in) {};
+\node[subsquare] at (3in, 3in) {};
+\node[subsquare] at (3in, 1in) {};
+\node[subsquare] at (3in, -1in) {};
+\node[subsquare] at (3in, -3in) {};
+\node[subsquare] at (1in, -3in) {};
+\node[subsquare] at (-1in, -3in) {};
+\node[subsquare] at (-3in, -3in) {};
+\node[subsquare] at (-3in, -1in) {};
+\node[subsquare] at (-3in, 1in) {};
+\node[subsquare] at (-3in, 3in) {};
+\node[subsquare] at (-1in, 3in) {};
+
+
+
+	\pic[rotate=180, transform shape] at (2in,4in) {image_a={\pone}};
+	\pic at (2in, 2in) {image_a={\pfive}};
+	\pic at (2in, 0in) {image_c={\pfive}};
+	\pic at (2in, -2in) {image_c={\pone}};
+	\pic[rotate=180, transform shape] at (4in, -2in) {image_c={\pthree}};
+	\pic[rotate=180, transform shape] at (2in, -2in) {image_d={\pthree}};
+	\pic[rotate=180, transform shape] at (0in, -2in) {image_d={\pone}};
+	\pic at (-4in, -4in) {image_d={\pfive}};
+	\pic at (-4in, -2in) {image_b={\pfive}};
+	\pic at (-4in, 0in) {image_b={\pone}};
+	\pic[rotate=180, transform shape] at (-2in, 4in) {image_b={\pthree}};
+	\pic[rotate=180, transform shape] at (0in, 4in) {image_a={\pthree}};
+
+\end{tikzpicture}
+\end{document}

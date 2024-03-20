@@ -1,13 +1,35 @@
 \documentclass{standalone}
 \usepackage{hexatetraflexagon}
 \usepackage{fontspec}
+\setmainfont{Tex Gyre Schola}
 
+\usepackage{contour}
+
+\definecolor{monstereye}{HTML}{faf9a5}
 \begin{document}
 \begin{tikzpicture}
-\node[minimum width=4in, minimum height=4in] at (0,0) {};
+\node[minimum width=4in, minimum height=4in, inner sep=0pt] at (0,0) {\includegraphics[height=4in]{Images/Monsters/missing_monsters_title_card_background.png}};
 
-\node at (0, 0.6in) {{\setmainfont[Scale=3.0]{Londrina Outline}\Huge Missing}};
-\node at (0, -0.6in) {{\setmainfont[Scale=3.0]{Londrina Outline}\Huge Monsters}};
+%\node at (0, 0.6in) {{\setmainfont[Scale=3.0]{Londrina Outline}\Huge \textcolor{black}{Matching}}};
+%\node at (0, -0.6in) {{\setmainfont[Scale=3.0]{Londrina Outline}\Huge \textcolor{black}{Monsters}}};
+%
+%\node at (-1in, 1.85in) {\textcolor{black}{\phantom{g}Version 1.0\phantom{g}}};
+%\node at (1in, 1.85in) {\textcolor{black}{Flexagon 1/5}};
+
+%\node at (-1in, -1.85in) {\textcolor{black}{\phantom{g}Michael Purcell\phantom{g}}};
+%\node at (1in, -1.85in) {\textcolor{black}{mike@armiger.games}};
+
+\node[anchor=north west] at (-1.825in, 1.925in) {\textcolor{black}{Version 1.0\phantom{g}}};
+\node[anchor=north east] at (1.825in, 1.925in) {\textcolor{black}{Flexagon 5/5}};
+
+
+%\node[anchor=west] at (-1.825in, -1.675in) {\textcolor{black}{Michael Purcell}};
+%\node[anchor=west] at (-1.825in, -1.85in) {\textcolor{black}{mike@armiger.games}};
+\node[anchor=south west, text width=1.5in] at (-1.825in, -1.925in) {Michael Purcell\\mike@armiger.games\\armigergames.itch.io};
+
+\node[anchor=south east] at (1.825in, -1.93625in) {\includegraphics[scale=1.0]{Images/Monsters/missing_monsters_qrcode.png}};
+%\node[anchor=south west, text width=1in] at (0.175in, -1.9325in) {Get the rules\\[0.575ex]for Missing\\[0.575ex]Monsters here:};
+\node[anchor=south west, text width=1in] at (0.175in, -1.925in) {Game rules and assembly instructions:\phantom{g}};
 
 \end{tikzpicture}
 
